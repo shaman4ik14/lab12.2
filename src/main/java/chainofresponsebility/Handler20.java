@@ -5,7 +5,8 @@ public class Handler20 extends Handler{
         super(nominal);
     }
     @Override
-    public void process(int amount) {
+    public Object process(int amount) {
         super.process(amount);
+        return null;
     }
 }

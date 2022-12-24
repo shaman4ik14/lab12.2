@@ -12,7 +12,7 @@ public abstract class Handler {
         this.nominal = nominal;
     }
 
-    public void process(int amount){
+    public Object process(int amount){
         if (amount%nominal > 0 && getNext() == null){
             throw new IllegalArgumentException();
         } else if (getNext() != null) {
@@ -23,5 +23,6 @@ public abstract class Handler {
         } else if (amount/nominal != 0){
             System.out.println(amount/nominal + " * " + nominal);
         }
+        return null;
     }
 }

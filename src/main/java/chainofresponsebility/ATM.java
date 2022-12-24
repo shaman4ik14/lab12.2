@@ -2,13 +2,13 @@ package chainofresponsebility;
 
 
 public class ATM {
-    private int amount;
+    public int amount;
     public ATM( int amount){
         this.amount = amount;
     }
 
     public static void main(String[] args){
-        ATM terminal = new ATM(0);
+        ATM terminal = new ATM(1025);
         Handler handler1000 = new Handler1000(1000);
         Handler handler500 = new Handler500(500);
         Handler handler200 = new Handler200(200);
